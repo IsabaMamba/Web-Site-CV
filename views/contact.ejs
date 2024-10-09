@@ -1,0 +1,68 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Contact Me</h1>
+<div class="container contact-me-container">
+  
+  <p>I would love to hear from you! Please fill out the form below to get in touch.</p>
+
+  <form id="contactForm">
+      <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+
+      <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+
+      <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Send Message</button>
+  </form>
+
+  <div class="contact-info">
+      <h3>Other Ways to Contact Me</h3>
+      <p>Email: <a href="mailto:isabakristoper@gmail.com">isabakristoper@gmail.com</a></p>
+      <p>Phone: +506-60055873</p>
+  </div>
+</div>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Evitar el envío tradicional del formulario
+
+    const formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value
+    };
+
+    try {
+      const response = await fetch("/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert(result.message); // Mostrar alerta con el mensaje
+        window.location.href = "/"; // Redirigir al usuario al index
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      alert("There was an error submitting the form.");
+    }
+  });
+</script>
+
+<%- include("partials/footer.ejs") %>

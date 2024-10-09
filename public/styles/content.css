@@ -1,0 +1,196 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+header{
+  flex: 0 0 auto;
+}
+footer {
+  flex: 0 0 auto;
+  margin-top: 50px;
+}
+
+main {
+  text-align: center;
+  padding: 5vmin;
+  flex: 1 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem; /* Tamaño grande */
+  color: #2c3e50; /* Color oscuro */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 20px; /* Espacio debajo del h1 */
+  text-transform: uppercase; /* Poner el texto en mayúsculas */
+  font-family: 'Arial', sans-serif; /* Fuente */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+h2{
+  font-size: 2.5rem; 
+  color: #2c3e50; 
+  text-align: center; 
+  margin-bottom: 20px; 
+  text-transform: uppercase; 
+  font-family: 'Arial', sans-serif; 
+  letter-spacing: 1px; 
+}
+
+
+p {
+  color: grey;
+}
+
+.profile {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 15px;
+}
+
+
+.large-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+form {
+  margin-top: 50px;
+}
+
+.feedback-input {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #3586ff;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #3586ff;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: #3586ff;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+[type="submit"]:hover {
+  background: #3586ff;
+}
+
+
+.about-me-container {
+  max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
+  margin: 20px auto; /* Centra el contenedor */
+  padding: 20px; /* Espaciado interno */
+  background-color: #f9f9f9; /* Color de fondo */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.about-me-container h2 {
+  text-align: center; /* Centra el título */
+  color: #333; /* Color del texto */
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.about-me-container p {
+  line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+  color: #555; /* Color del texto */
+  margin-bottom: 15px; /* Espacio entre párrafos */
+}
+
+
+.contact-me-container {
+  max-width: 600px; /* Ajusta el ancho según sea necesario */
+  margin: 20px auto; /* Centra el contenedor */
+  padding: 20px; /* Espaciado interno */
+  background-color: #f9f9f9; /* Color de fondo */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.contact-me-container h2 {
+  text-align: center; /* Centra el título */
+  color: #333; /* Color del texto */
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.contact-me-container p {
+  text-align: center; /* Centra el texto */
+  color: #555; /* Color del texto */
+}
+
+.contact-info {
+  margin-top: 20px; /* Espacio por encima de la información de contacto */
+}
+
+.contact-info h3 {
+  margin-top: 30px; /* Espacio por encima del subtítulo */
+}
+
+.contact-info a {
+  margin-right: 15px; /* Espacio entre los enlaces */
+  color: #007bff; /* Color de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+}
+
+
+.blockquote  {
+  text-align: justify; /* Justifica el texto */
+  word-spacing: 0.05em; /* Ajusta el espaciado entre palabras */
+  max-width: 100%; /* Asegúrate de que no se extienda más allá del contenedor */
+}
+.blockquote p {
+  font-size: 0.85rem; /* Tamaño de fuente más pequeño */
+  line-height: 1.4; /* Ajusta la altura de la línea para mejorar la legibilidad */
+  margin-bottom: 10px; /* Reduce el margen inferior para evitar espacios innecesarios */
+}
+
+.blockquote-footer {
+  display: flex; /* Cambia a flexbox para alinear */
+  align-items: baseline; /* Alinea los elementos en la base */
+  background-color: black;
+  border-radius: 30%;
+  padding: 10px; /* Añade algo de espacio alrededor */
+  color: white; /* Cambia el color del texto si es necesario */
+}
+
+.cite-color {
+  margin-left: 5px; /* Espacio entre el nombre y el título */
+}
